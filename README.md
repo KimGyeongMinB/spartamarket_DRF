@@ -14,11 +14,11 @@
 ## 기능 소개
 1. 회원가입
 
-*![회원가입 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/image.png)
+*![회원가입 예시]([https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/image.png](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%98%88%EC%8B%9C.png))
 
 3. 로그인
 
-*![로그인 예시]([https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/image.png](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%98%88%EC%8B%9C.png)
+*![로그인 예시]
    
 5. 로그아웃
 6. 회원탈퇴
