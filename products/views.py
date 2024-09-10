@@ -40,7 +40,7 @@ class GoodsAPIView(APIView):
             goods_put = Goods.objects.get(id=productId)
             serializer = GoodsSerializer(goods_put, data=request.data, partial=True)
 
-            if serializer.is_valid(raise_exception=True):
+            if serializer.is_valid():
                 serializer.save()
                 return Response(serializer.data)
             return Response({"message":"상품 수정이 불가능한 글입니다."}, status=400)

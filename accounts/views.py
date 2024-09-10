@@ -30,7 +30,13 @@ class SignupAPIView(APIView):
 
         return Response({'message': '회원가입이 완료되었습니다'}, status=200)
     
-# 로그인
+    def delete(self, request):
+        if request.user.is_authenticated:  # 로그인 상태일때
+            request.user.delete()
+            return Response({'message': '회원탈퇴가 완료되었습니다'})
+        return Response("로그인을 해야 이용이 가능합니다", status=400)
+    
+    # 로그인
 class SigninAPIView(APIView):
     permission_classes = [AllowAny] # 로그인 인증 미진행 
 
