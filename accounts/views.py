@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User # 모델에 있는 USER 가져오기
 from .validators import validate_signup
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.contrib.auth import authenticate # 로그인
 from .serializers import UserSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -53,3 +53,15 @@ class SigninAPIView(APIView):
 
             return Response({"message": "로그인성공하셨습니다", "data": res_data}, status=200)
         return Response({"message": "로그인에 실패하셨습니다. 다시해주세요"}, status=400)
+    
+# 로그아웃
+class LogoutAPIView(APIView):
+	# login한 user에 대한 확인 필요.
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        refresh_token_str = request.data.get("refresh_token")
+        refresh_token = RefreshToken(refresh_token_str)
+        refresh_token.blacklist()
+
+        return Response({"로그아웃 완료되었습니다"}, status=200)
