@@ -17,11 +17,14 @@
 *![회원가입 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/image.png)
 
 3. 로그인
-4. 로그아웃
-5. 회원탈퇴
-6. 회원정보수정
-7. 비밀번호변경
-8. 상품등록
-9. 상품목록조회
-10. 상품삭제
-11. 상품수정
+
+*![로그인 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/image.png)
+   
+5. 로그아웃
+6. 회원탈퇴
+7. 회원정보수정
+8. 비밀번호변경
+9. 상품등록
+10. 상품목록조회
+11. 상품삭제
+12. 상품수정
