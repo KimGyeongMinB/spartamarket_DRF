@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User # 모델에 있는 USER 가져오기
@@ -65,3 +65,14 @@ class LogoutAPIView(APIView):
         refresh_token.blacklist()
 
         return Response({"로그아웃 완료되었습니다"}, status=200)
+    
+
+class Profiledetail(APIView):
+# 로그인 했을 때 적용
+    permission_classes = [IsAuthenticated]
+
+# 유저 정보 불러오기
+    def get(self, request, username):
+        user_profile = get_object_or_404(User, username=username)
+        serializer = UserSerializer(user_profile)
+        return Response(serializer.data)
