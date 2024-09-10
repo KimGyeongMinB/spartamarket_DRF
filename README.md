@@ -13,7 +13,7 @@
 ---
 ## 기능 소개
 1. 회원가입
-2. 
+https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/image.png
 3. 로그인
 4. 로그아웃
 5. 회원탈퇴
