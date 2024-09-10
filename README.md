@@ -19,8 +19,7 @@
 3. 로그아웃
 *![로그아웃예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83.png)
 4. 회원탈퇴
-*![회원탈퇴 예시]
-(https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%9A%8C%EC%9B%90%ED%83%88%ED%87%B4.png)
+*![회원탈퇴 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%9A%8C%EC%9B%90%ED%83%88%ED%87%B4.png)
 5. 회원정보수정
 *![회원정보수정 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%94%84%EB%A1%9C%ED%95%84%20%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95.png)
 6. 비밀번호변경
