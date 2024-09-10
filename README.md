@@ -13,18 +13,23 @@
 ---
 ## 기능 소개
 1. 회원가입
-
 *![회원가입 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85%20%EC%98%88%EC%8B%9C.png)
-
-3. 로그인
-
+2. 로그인
 *![로그인 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%98%88%EC%8B%9C.png)
-   
-5. 로그아웃
-6. 회원탈퇴
-7. 회원정보수정
-8. 비밀번호변경
-9. 상품등록
-10. 상품목록조회
-11. 상품삭제
-12. 상품수정
+3. 로그아웃
+*![로그아웃예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83.png)
+4. 회원탈퇴
+*![회원탈퇴 예시]
+(https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%9A%8C%EC%9B%90%ED%83%88%ED%87%B4.png)
+5. 회원정보수정
+*![회원정보수정 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%ED%94%84%EB%A1%9C%ED%95%84%20%EC%A0%95%EB%B3%B4%20%EC%88%98%EC%A0%95.png)
+6. 비밀번호변경
+*![비밀번호변경 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8%20%EB%B3%80%EA%B2%BD.png)
+7. 상품등록
+*![상품등록 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EC%83%81%ED%92%88%EB%93%B1%EB%A1%9D.png)
+8. 상품목록조회
+*![상품목록조회 예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EC%83%81%ED%92%88%20%EB%AA%A9%EB%A1%9D.png)
+9. 상품삭제
+*![상품삭제예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EC%83%81%ED%92%88%20%EC%88%98%EC%A0%95.png)
+10. 상품수정
+*![상품수정예시](https://github.com/KimGyeongMinB/spartamarket_DRF/blob/main/drf%20%EC%83%81%ED%92%88%EC%82%AD%EC%A0%9C.png)
