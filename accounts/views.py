@@ -5,7 +5,7 @@ from .models import User # 모델에 있는 USER 가져오기
 from .validators import validate_signup, validate_update_user
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.contrib.auth import authenticate # 로그인
-from .serializers import UserSerializer
+from .serializers import UserSerializer, ChangePasswordSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 
 # Create your views here.
@@ -99,3 +99,20 @@ class Profiledetail(APIView):
 
         serializer = UserSerializer(user)
         return Response(serializer.data)
+    
+# password 변경
+class ChangePasswordAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def put(self, request):
+        serializer = ChangePasswordSerializer(data=request.data)
+        print(serializer)  # 디버깅용
+
+        if serializer.is_valid():
+            user = request.user
+            if user.check_password(serializer.data.get('old_password')):
+                user.set_password(serializer.data.get('new_password'))
+                user.save()
+                return Response({'message': '비밀번호를 성공적으로 변경하였습니다.'}, status=200)
+            return Response({'error': '비밀번호가 같습니다 새 비밀번호를 입력해주세요'}, status=400)
+        return Response(serializer.errors, status=400)
