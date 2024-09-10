@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User # 모델에 있는 USER 가져오기
-from .validators import validate_signup
+from .validators import validate_signup, validate_update_user
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from django.contrib.auth import authenticate # 로그인
 from .serializers import UserSerializer
@@ -75,4 +75,27 @@ class Profiledetail(APIView):
     def get(self, request, username):
         user_profile = get_object_or_404(User, username=username)
         serializer = UserSerializer(user_profile)
+        return Response(serializer.data)
+    
+# 유저 정보 수정
+    def put(self, request, username):
+        user = User.objects.get(username=username)
+
+        is_valid, err_msg = validate_update_user(request.data)
+        if not is_valid:
+            return Response({"error": err_msg}, status=400)
+
+        nickname = request.data.get("nickname")
+        username = request.data.get("username")
+        email = request.data.get("email")
+        birthday = request.data.get("birthday")
+
+        user.nickname = nickname
+        user.username = username
+        user.email = email
+        user.birthday = birthday
+
+        user.save()
+
+        serializer = UserSerializer(user)
         return Response(serializer.data)
